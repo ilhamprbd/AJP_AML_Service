@@ -23,6 +23,10 @@ namespace API_TEST.DB.Models
 
         public DbSet<API_TEST.DB.Models.Ouput> Ouput { get; set; }
 
+        public DbSet<API_TEST.DB.Models.GetDetailProviderControllerOutput> GetDetailProviderControllerOutput { get; set; }
+
+        public DbSet<API_TEST.DB.Models.NBApplication> GetNBApplication { get; set; }
+
         public DbSet<API_TEST.DB.Models.TestOutput> TestOuput { get; set; }
 
     }

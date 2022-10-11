@@ -1,17 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-
-
 namespace API_TEST.DB.Models
 {
-
-
-    public class Ouput
+    public class GetDetailProviderControllerOutput
     {
         [Key]
         public string provider_code { get; set; }
@@ -22,5 +17,6 @@ namespace API_TEST.DB.Models
         public string address2 { get; set; }
         public string city_code { get; set; }
         public string province_code { get; set; }
+
     }
 }

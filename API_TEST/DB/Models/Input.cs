@@ -7,9 +7,8 @@ namespace API_TEST.DB.Models
 {
     public class Input
     {
-        public string strErrorCode { get; set; }
-        public string strErrorDesc { get; set; }
-        public string strProposalGeneralId { get; set; }
+        public string strCode { get; set; }
+
 
     }
 }
