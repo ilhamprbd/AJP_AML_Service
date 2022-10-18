@@ -9,14 +9,10 @@ namespace API_TEST.DB.Models
     public class NBApplication
     {
         [Key]
-        public string app_id { get; set; }
-        public string policy_holder { get; set; }
-        public string policy_id { get; set; }
-        public string package_code { get; set; }
-        public DateTime create_date { get; set; }
-        public DateTime start_date { get; set; }
-        public DateTime end_date { get; set; }
-        public string business_unit_code { get; set; }
-
+        public string kode_perusahaan { get; set; }
+        public string nama_perusahaan { get; set; }
+        public string bidang_usaha { get; set; }
+        public string alamat { get; set; }
+        public string status { get; set; }
     }
 }

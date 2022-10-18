@@ -27,10 +27,11 @@ namespace API_TEST.Controllers
 
         // GET: api/Ouputs
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<NBApplication>>> GetOuput(Input input)
-        {
-            string StoredProc = "exec nb_sp_application " +
-             "'" + input.strCode + "'";
+       // public async Task<ActionResult<IEnumerable<NBApplication>>> GetOuput(Input input)
+             public async Task<ActionResult<IEnumerable<NBApplication>>> GetOuput()
+            {
+            string StoredProc = "exec [SP_API_COMPANY] ";// +
+           //  "'" + input.strCode + "'";
 
 
             return await _context.GetNBApplication.FromSqlRaw(StoredProc).ToListAsync();
