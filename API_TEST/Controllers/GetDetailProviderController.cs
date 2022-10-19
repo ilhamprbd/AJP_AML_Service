@@ -26,16 +26,14 @@ namespace API_TEST.Controllers
 
         // GET: api/Ouputs
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<Ouput>>> GetOuputssss(Input input)
+        public async Task<ActionResult<IEnumerable<GetDetailProviderOutput>>> GetOuputssss(GetDetailProviderInput input)
         {
             string StoredProc = "exec SP_API_POST_PROVIDER " +
              "'" + input.strCode + "'";
 
 
-            return await _context.Ouput.FromSqlRaw(StoredProc).ToListAsync();
+            return await _context.GetDetailProviderOutput.FromSqlRaw(StoredProc).ToListAsync();
         }
-
-
 
 
 

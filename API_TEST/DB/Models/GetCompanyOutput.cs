@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_TEST.DB.Models
 {
-    public class NBApplication
+    public class GetCompanyOutput
     {
         [Key]
         public string kode_perusahaan { get; set; }

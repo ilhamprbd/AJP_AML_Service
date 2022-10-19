@@ -37,7 +37,7 @@ namespace API_TEST
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API_TEST", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NCSG_API", Version = "v1" });
             });
         }
 
@@ -50,6 +50,13 @@ namespace API_TEST
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API_TEST v1"));
             }
+            else
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/NCSG-API/swagger/v1/swagger.json", "API_TEST v1"));
+            }
+
+            
 
             app.UseHttpsRedirection();
 

@@ -11,13 +11,13 @@ namespace API_TEST.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NBApplicationController : ControllerBase
+    public class GetCompanyController : ControllerBase
     {
 
 
         private readonly API_DB_Context _context;
 
-        public NBApplicationController(API_DB_Context context)
+        public GetCompanyController(API_DB_Context context)
         {
             _context = context;
         }
@@ -28,13 +28,13 @@ namespace API_TEST.Controllers
         // GET: api/Ouputs
         [HttpPost]
        // public async Task<ActionResult<IEnumerable<NBApplication>>> GetOuput(Input input)
-             public async Task<ActionResult<IEnumerable<NBApplication>>> GetOuput()
+             public async Task<ActionResult<IEnumerable<GetCompanyOutput>>> GetOuput()
             {
             string StoredProc = "exec [SP_API_COMPANY] ";// +
            //  "'" + input.strCode + "'";
 
 
-            return await _context.GetNBApplication.FromSqlRaw(StoredProc).ToListAsync();
+            return await _context.GetCompanyOutput.FromSqlRaw(StoredProc).ToListAsync();
         }
     }
 }

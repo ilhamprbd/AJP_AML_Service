@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API_TEST.DB.Models
 {
-    public class Input
+    public class GetDetailProviderInput
     {
         public string strCode { get; set; }
 
