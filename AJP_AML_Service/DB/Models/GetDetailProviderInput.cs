@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API_TEST.DB.Models
+namespace AMLService.DB.Models
 {
     public class GetDetailProviderInput
     {

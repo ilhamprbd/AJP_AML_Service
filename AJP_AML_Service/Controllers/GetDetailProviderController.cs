@@ -1,4 +1,4 @@
-﻿using API_TEST.DB.Models;
+﻿using AMLService.DB.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API_TEST.Controllers
+namespace AMLService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

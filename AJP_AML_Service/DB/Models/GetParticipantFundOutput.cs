@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API_TEST.DB.Models
+namespace AMLService.DB.Models
 {
 	[Keyless]
 	public class GetParticipantFundOutput

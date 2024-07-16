@@ -11,10 +11,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using API_TEST.DB.Models;
+using AJP_AML_Service.DB.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace API_TEST
+namespace AJP_AML_Service
 {
     public class Startup
     {
@@ -31,13 +31,13 @@ namespace API_TEST
 
             // Register SQL database configuration context as services.
             services.AddDbContext<API_DB_Context>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("DevConnection"));
+                options.UseSqlServer(Configuration.GetConnectionString("AJPConnection"));
             });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NCSG_API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AJP_AML_SERVICE", Version = "v1" });
             });
         }
 
@@ -48,12 +48,12 @@ namespace API_TEST
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API_TEST v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AJP_SERVICE v1"));
             }
             else
             {
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/NCSG-API/swagger/v1/swagger.json", "API_TEST v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("v1/swagger.json", "AJP_SERVICE v1"));
             }
 
             
